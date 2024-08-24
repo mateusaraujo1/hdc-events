@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="/css/welcome/navbar.css">
     <link rel="stylesheet" href="/css/welcome/event.css">
     <link rel="stylesheet" href="/css/welcome/footer.css">
+    <link rel="stylesheet" href="/css/create/create.css">
     
     <script src="/js/script.js"></script>
 

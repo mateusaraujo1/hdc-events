@@ -1,0 +1,11 @@
+#event-create-container {
+    padding: 30px;
+}
+
+#event-create-container label {
+    font-weight: bold;
+}
+
+#event-create-container h1 {
+    text-align: center;
+}

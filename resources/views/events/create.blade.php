@@ -9,19 +9,19 @@
     <h1>Crie o seu evento</h1>
 
     <form action="/events" method="POST">
-
+        @csrf
         <div class="form-group">
             <label for="title">Eventos:</label>
-            <input class="form-control" type="text" id="title" name="title" placeholder="Nome do evento">
+            <input class="form-control" type="text" id="title" name="title" placeholder="Nome do evento" required>
         </div>
 
         <div class="form-group">
-            <label for="title">Cidade:</label>
-            <input class="form-control" type="text" id="city" name="city" placeholder="Local do evento">
+            <label for="city">Cidade:</label>
+            <input class="form-control" type="text" id="city" name="city" placeholder="Local do evento" required>
         </div>
 
         <div class="form-group">
-            <label for="title">O evento é privado?</label>
+            <label for="private">O evento é privado?</label>
             <select name="private" id="private" class="form-control">
                 <option value="0">Não</option>
                 <option value="1">Sim</option>
@@ -29,11 +29,11 @@
         </div>
 
         <div class="form-group">
-            <label for="title">Descrição:</label>
-            <textarea name="description" id="description" class="form-control" placeholder="O que vai acontecer?"></textarea>
+            <label for="description">Descrição:</label>
+            <textarea name="description" id="description" class="form-control" placeholder="O que vai acontecer?" required></textarea>
         </div>
 
-        <input type="submit" class="btn btn-primary" value="Criar evento">
+        <input type="submit" class="btn btn-warning" value="Criar evento">
 
     </form>
 
