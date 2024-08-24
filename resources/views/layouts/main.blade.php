@@ -16,11 +16,11 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
     <!-- CSS da aplicação -->
-    <link rel="stylesheet" href="/css/index/index.css">
-    <link rel="stylesheet" href="/css/index/search.css">
-    <link rel="stylesheet" href="/css/index/navbar.css">
-    <link rel="stylesheet" href="/css/index/event.css">
-    <link rel="stylesheet" href="/css/index/footer.css">
+    <link rel="stylesheet" href="/css/welcome/index.css">
+    <link rel="stylesheet" href="/css/welcome/search.css">
+    <link rel="stylesheet" href="/css/welcome/navbar.css">
+    <link rel="stylesheet" href="/css/welcome/event.css">
+    <link rel="stylesheet" href="/css/welcome/footer.css">
     
     <script src="/js/script.js"></script>
 
