@@ -1,0 +1,21 @@
+/* navbar */
+
+#navbar {
+    justify-content: space-between;
+    background-color: #FFF;
+    padding: 5px 0;
+}
+
+#navbar img {
+    width: 40px;
+}
+
+#navbar a {
+    font-size: 14px;
+    color: #757575;
+}
+
+#navbar a:hover {
+    font-size: 14px;
+    color: #F2A340;
+}

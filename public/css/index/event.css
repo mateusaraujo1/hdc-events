@@ -1,0 +1,31 @@
+/* events list */
+
+#events-container {
+    padding: 50px;
+}
+
+#events-container h2 {
+    margin-bottom: 10px;
+}
+
+#events-container .subtitle {
+    color: #757575;
+    margin-bottom: 30px;
+}
+
+#cards-container {
+    display: flex;
+}
+
+#events-container .card {
+    flex: 1 1 0;
+    max-width: 25%;
+    border-radius: 10px;
+    padding: 0;
+    margin: 5px;
+}
+
+#events-container img {
+    max-height: 150px;
+    border-radius: 10px 10px 0 0;
+}
