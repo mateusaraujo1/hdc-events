@@ -8,8 +8,13 @@
 
     <h1>Crie o seu evento</h1>
 
-    <form action="/events" method="POST">
+    <form action="/events" method="POST" enctype="multipart/form-data">
         @csrf
+        <div class="form-group">
+            <label for="image">Imagem do evento:</label>
+            <input class="form-control-file" type="file" id="image" name="image" placeholder="Imagem do evento">
+        </div>
+
         <div class="form-group">
             <label for="title">Eventos:</label>
             <input class="form-control" type="text" id="title" name="title" placeholder="Nome do evento" required>

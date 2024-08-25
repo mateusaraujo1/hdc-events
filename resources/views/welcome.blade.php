@@ -28,7 +28,7 @@
 
                     <div class="card col-md-3">
 
-                        <img class="card-img" src="/img/event_placeholder.jpg" alt="{{ $event->title }}">
+                        <img class="card-img" src="/img/events/{{$event->image}}" alt="{{ $event->title }}">
 
                         <div class="card-body">
 
