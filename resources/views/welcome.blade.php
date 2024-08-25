@@ -38,7 +38,7 @@
 
                             <p class="card-participants">X participantes</p>
 
-                            <a href="#" class="btn btn-warning">Saber mais</a>
+                            <a href="/events/{{ $event->id }}" class="btn btn-warning">Saber mais</a>
 
                         </div>
 
