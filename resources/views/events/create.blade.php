@@ -16,8 +16,13 @@
         </div>
 
         <div class="form-group">
-            <label for="title">Eventos:</label>
+            <label for="title">Evento:</label>
             <input class="form-control" type="text" id="title" name="title" placeholder="Nome do evento" required>
+        </div>
+
+        <div class="form-group">
+            <label for="date">Data do evento:</label>
+            <input type="date" class="form-control" id="date" name="date">
         </div>
 
         <div class="form-group">
