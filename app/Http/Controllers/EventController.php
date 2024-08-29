@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Event;
 use Illuminate\Http\Request;
+
+use App\Models\Event;
+use App\Models\User;
 
 class EventController extends Controller
 {
@@ -58,6 +60,9 @@ class EventController extends Controller
     public function show($id) {
         $event = Event::findOrFail($id);
 
-        return view('events.show', ['event' => $event]);
+        $eventOwner = User::where('id', $event->user_id)->first();
+        // puxa o user com id = id_user(relacionado ao evento puxado), pega só o primeiro(só tem um)
+
+        return view('events.show', ['event' => $event, 'eventOwner' => $eventOwner]);
     }
 }
