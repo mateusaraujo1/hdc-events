@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="/css/create/create.css">
     <link rel="stylesheet" href="/css/show/show.css">
     <link rel="stylesheet" href="/css/dashboard/dashboard.css">
+    <link rel="stylesheet" href="/css/edit/edit.css">
     
     <script src="/js/script.js"></script>
 

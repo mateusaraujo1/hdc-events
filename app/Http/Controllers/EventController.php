@@ -81,4 +81,12 @@ class EventController extends Controller
 
         return redirect('/dashboard')->with('msg', 'Evento excluído com sucesso');
     }
+
+    public function edit($id) {
+
+        $event = Event::findOrFail($id);
+
+        return view('events.edit', ['event' => $event]);
+
+    }
 }
