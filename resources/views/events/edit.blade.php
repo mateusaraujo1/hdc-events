@@ -4,27 +4,11 @@
 
 @section('content')
 
-<script>
-  
-function Checkfiles(){
-    var fup = document.getElementById('filename');
-    var fileName = fup.value;
-    var ext = fileName.substring(fileName.lastIndexOf('.') + 1);
-
-    if(ext =="jpeg" || ext=="png"){
-        return true;
-    }
-    else{
-        return false;
-    }
-}
-</script>
-
 <div id="event-create-container" class="col-md-6 offset-md-3">
 
     <h1>Editar {{$event->title}}</h1>
 
-    <form action="/events/update/{{$event->id}}" method="POST" enctype="multipart/form-data">
+    <form action="/events/update/{{ $event->id }}" method="POST" enctype="multipart/form-data">
         @csrf
         @method('PUT')
         <div class="form-group">
@@ -77,7 +61,7 @@ function Checkfiles(){
             </div>
         </div>
 
-        <input type="submit" class="btn btn-warning" value="Criar evento">
+        <input type="submit" class="btn btn-warning" value="Editar evento">
 
     </form>
 
