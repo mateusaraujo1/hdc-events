@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="/css/welcome/footer.css">
     <link rel="stylesheet" href="/css/create/create.css">
     <link rel="stylesheet" href="/css/show/show.css">
+    <link rel="stylesheet" href="/css/dashboard/dashboard.css">
     
     <script src="/js/script.js"></script>
 
