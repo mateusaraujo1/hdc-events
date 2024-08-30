@@ -4,6 +4,22 @@
 
 @section('content')
 
+<script>
+ 
+function Checkfiles(){
+    var fup = document.getElementById('filename');
+    var fileName = fup.value;
+    var ext = fileName.substring(fileName.lastIndexOf('.') + 1);
+
+    if(ext =="jpeg" || ext=="png"){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+</script>
+
 <div id="event-create-container" class="col-md-6 offset-md-3">
 
     <h1>Crie o seu evento</h1>
@@ -12,7 +28,7 @@
         @csrf
         <div class="form-group">
             <label for="image">Imagem do evento:</label>
-            <input class="form-control-file" type="file" id="image" name="image" placeholder="Imagem do evento">
+            <input class="form-control-file" type="file" id="image" accept="image/*" name="image" placeholder="Imagem do evento">
         </div>
 
         <div class="form-group">
