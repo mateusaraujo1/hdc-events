@@ -59,11 +59,22 @@ class EventController extends Controller
 
     public function show($id) {
         $event = Event::findOrFail($id);
+        $hasUserJoined = false;
 
         $eventOwner = User::where('id', $event->user_id)->first();
         // puxa o user com id = id_user(relacionado ao evento puxado), pega só o primeiro(só tem um)
 
-        return view('events.show', ['event' => $event, 'eventOwner' => $eventOwner]);
+        $user = auth()->user();
+
+        $eventsAsParticipant = $user->eventsAsParticipant;
+
+        foreach ($eventsAsParticipant as $eventAsParticipant) {
+            if ($eventAsParticipant->id == $id) {
+                $hasUserJoined = true;
+            }
+        }
+
+        return view('events.show', ['event' => $event, 'eventOwner' => $eventOwner, 'hasUserJoined' => $hasUserJoined]);
     }
 
     public function dashboard() {
@@ -71,7 +82,6 @@ class EventController extends Controller
 
         $events = $user->events;
         // user tem vários eventos
-
 
         $eventsAsParticipant = $user->eventsAsParticipant;
 
@@ -137,15 +147,7 @@ class EventController extends Controller
 
         $user = auth()->user();
 
-        $eventsAsParticipant = $user->eventsAsParticipant;
-
         $event = Event::findOrFail($id);
-
-        foreach ($eventsAsParticipant as $eventAsParticipant) {
-            if ($eventAsParticipant->id == $id) {
-                return redirect('/dashboard')->with('msg', 'Você já está inscrito no evento ' . $event->title);
-            }
-        }
 
         $user->eventsAsParticipant()->attach($id);
 
