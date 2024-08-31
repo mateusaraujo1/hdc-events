@@ -72,7 +72,11 @@ class EventController extends Controller
         $events = $user->events;
         // user tem vários eventos
 
-        return view('events.dashboard', ['events' => $events]);
+
+        $eventsAsParticipant = $user->eventsAsParticipant;
+
+        return view('events.dashboard', 
+                    ['events' => $events, 'eventsasparticipant' => $eventsAsParticipant]);
     }
 
     public function destroy($id) {
@@ -113,5 +117,16 @@ class EventController extends Controller
         // findOrFail puxa um objeto, update request all atualiza esse objeto com todos
         // os dados das requisições passadas
         return redirect('/dashboard')->with('msg', 'Evento editado com sucesso');
+    }
+    
+    public function joinEvent($id) {
+
+        $user = auth()->user();
+
+        $eventsAsParticipant = $user->eventsAsParticipant()->attach($id);
+
+        $event = Event::findOrFail($id);
+
+        return redirect('/dashboard')->with('msg', 'Sua presença foi confirmada no evento ' . $event->title);
     }
 }
